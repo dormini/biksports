@@ -1,0 +1,90 @@
+html, body {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    -webkit-user-select: none;
+}
+
+#boxes {
+    margin-left: auto;
+    margin-right: auto;
+    width: 1260px;
+}
+
+.row {
+    display: table-row;
+    text-align: center;
+    height: 220px;
+    width: 100%;
+}
+
+.box {
+    display: table-cell;
+    height: 200px;
+    width: 400px;
+    background-color: #a3a3a3;
+    border: 10px solid white;
+    transition: background-color 0.2s;
+}
+
+.box-hover {
+    background-color: #cfcfcf;
+}
+
+.box-hover .box_content:not(.ui-draggable-dragging){
+    opacity: 0.3 !important;
+}
+
+.box_content {
+    display: inline-block;
+    height: 116px;
+    width: 396px;
+    margin: 2px;
+    font-size: 50px;
+    padding-top: 80px;
+    text-align: center;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+#slides {
+    position: fixed;
+    z-index: 10;
+    bottom: 0;
+    width: 100%;
+    height: 150px;
+    background-color: #676767;
+    text-align: center;
+}
+
+.slide {
+    display: inline-block;
+    height: 115px;
+    width: 120px;
+    background-color: white;
+    margin: 20px 5px 0 5px;
+}
+
+.slide_content {
+    height: 80px;
+    width: 120px;
+    font-size: 30px;
+    padding-top: 35px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.placeholder .slide_content {
+    opacity: 0.3;
+}
+
+.slide.empty .slide_content {
+    opacity: 0.3;
+    cursor: default;
+}
+
+.ui-effects-transfer {
+    border: 2px dotted #676767;
+    opacity: 0.6;
+    z-index: 100;
+}
